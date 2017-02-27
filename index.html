@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="description" content="It is a mystery.  Or maybe it's a fortune.  We aren't entirely sure.">
+    <meta name="author" content="Wump's Fortune Channel">
+    <meta property="og:title" name="Title" content="Wump's Fortune Channel"/>
+    <meta property="og:description" name="Description"
+          content="It is a mystery.  Or maybe it's a fortune.  We aren't entirely sure."/>
+    <meta property="og:image" name="Image" content="https://imgur.com/OcCRfnW.png"/>
+    <meta property="og:url" name="URL" content="https://clubwumpus.github.io/wumpfortune/"/>
+	<title>Wump's Fortune Channel</title>
+      <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="fortune.js"></script>
+</head>
+
+<script>
+var select = new Audio("snd/select.mp3");
+var hover = new Audio("snd/hover.mp3");
+</script>
+
+<body>
+<div id="menu" class="menu">
+<input type="text" id="nameInput" value="" placeholder="Enter your name..." onkeydown = "if (event.keyCode == 13) document.getElementById('button').click()">
+<input id="button" type="button" onclick="fortuneCalc();" value="Submit" onmouseover="hover.play();">
+<br>
+<div id="results">
+<p id="luckValue"></p><br>
+<p id="fortunetext"></p><br>
+<p id="luckycolor"></p>
+</div>
+</div>
+	<a id="backtomenu" href="https://clubwumpus.github.io/wumpmenu/" onmouseover="hover.play();" onclick="select.play();"> </a>
+	<a id="dayToggle" onclick="dayToggle();" onmouseover="hover.play();"> </a>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</body>
+<audio src="snd/bgm.mp3" loop=1 id="menu" auto autoplay></audio>
+</html>
